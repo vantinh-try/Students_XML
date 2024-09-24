@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<qlsv>
+  <sv>
+    <masv>21d480201023</masv>
+    <hoten>Nguyễn Văn Tịnh Test</hoten>
+    <lop>dct21</lop>
+    <namsinh>2002</namsinh>
+    <gioitinh>Nam</gioitinh>
+    <sdt>0329097923</sdt>
+    <diachi>Tịnh Ấn Đông</diachi>
+  </sv>
+  <sv>
+    <masv>21D480201011</masv>
+    <hoten>Đỗ Minh Chiến</hoten>
+    <lop>dct21</lop>
+    <namsinh>2003</namsinh>
+    <gioitinh>Nam</gioitinh>
+    <sdt>124892093480</sdt>
+    <diachi>Tịnh Phong</diachi>
+  </sv>
+  <sv>
+    <masv>21D480201013</masv>
+    <hoten>Dương Văn Duy</hoten>
+    <lop>dct21</lop>
+    <namsinh>2003</namsinh>
+    <gioitinh>Nam</gioitinh>
+    <sdt>890980983</sdt>
+    <diachi>Thành Phố Quảng Ngãi, Phường Chánh Lộ</diachi>
+  </sv>
+  <sv>
+    <masv>22D480201024</masv>
+    <hoten>Trần Văn Nguyên</hoten>
+    <lop>dct22</lop>
+    <namsinh>2004</namsinh>
+    <gioitinh>Nam</gioitinh>
+    <sdt>345234235</sdt>
+    <diachi>Tịnh Ấn Đông</diachi>
+  </sv>
+  <sv>
+    <masv>22D480201025</masv>
+    <hoten>Võ Thị Ngọc Ánh</hoten>
+    <lop>dct22</lop>
+    <namsinh>2004</namsinh>
+    <gioitinh>Nữ</gioitinh>
+    <sdt>234235121</sdt>
+    <diachi>Tịnh Phong</diachi>
+  </sv>
+</qlsv>
