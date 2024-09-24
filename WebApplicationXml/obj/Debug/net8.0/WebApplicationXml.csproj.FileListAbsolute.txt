@@ -28,3 +28,4 @@
 /Applications/development/WebApplicationXml/WebApplicationXml/obj/Debug/net8.0/WebApplicationXml.pdb
 /Applications/development/WebApplicationXml/WebApplicationXml/obj/Debug/net8.0/WebApplicationXml.genruntimeconfig.cache
 /Applications/development/WebApplicationXml/WebApplicationXml/obj/Debug/net8.0/ref/WebApplicationXml.dll
+/Applications/development/WebApplicationXml/WebApplicationXml/obj/Debug/net8.0/WebApplicationXml.sourcelink.json
