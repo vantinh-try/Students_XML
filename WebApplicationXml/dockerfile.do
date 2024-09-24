@@ -1,17 +1,21 @@
-# Sử dụng hình ảnh .NET SDK
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+# Sử dụng hình ảnh base cho ASP.NET
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
+EXPOSE 80
 
-# Sao chép csproj và khôi phục các phụ thuộc
-COPY *.csproj ./
-RUN dotnet restore
+# Sử dụng hình ảnh cho việc xây dựng
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["WebApplicationXml/WebApplicationXml.csproj", "WebApplicationXml/"]
+RUN dotnet restore "WebApplicationXml/WebApplicationXml.csproj"
+COPY . .
+WORKDIR "/src/WebApplicationXml"
+RUN dotnet build "WebApplicationXml.csproj" -c Release -o /app/build
 
-# Sao chép phần còn lại và xây dựng
-COPY . ./
-RUN dotnet publish -c Release -o out
+FROM build AS publish
+RUN dotnet publish "WebApplicationXml.csproj" -c Release -o /app/publish
 
-# Tạo hình ảnh cho ứng dụng
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM base AS final
 WORKDIR /app
-COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "YourProjectName.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "WebApplicationXml.dll"]
