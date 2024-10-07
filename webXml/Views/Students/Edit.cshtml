@@ -1,0 +1,105 @@
+@model WebApplicationXml.Models.Student
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sửa Sinh Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="tel"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sửa Sinh Viên</h2>
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Masv" />
+        <div>
+            <label>Họ tên</label>
+            <input asp-for="Hoten" required />
+        </div>
+        <div>
+            <label>Lớp</label>
+            <input asp-for="Lop" required />
+        </div>
+        <div>
+            <label>Năm sinh</label>
+            <input asp-for="Namsinh" required />
+        </div>
+        <div>
+            <label>Giới tính</label>
+            <input asp-for="Gioitinh" required />
+        </div>
+        <div>
+            <label>SĐT</label>
+            <input asp-for="Sdt" required />
+        </div>
+        <div>
+            <label>Địa chỉ</label>
+            <input asp-for="Diachi" required />
+        </div>
+        <button type="submit">Cập nhật</button>
+    </form>
+</body>
+</html>
